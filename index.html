@@ -1,40 +1,220 @@
 <!DOCTYPE html>
 <html lang="lo">
 <head>
-  <meta charset="UTF-8">
-  <title>Dragon Background</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TOTTI911 | ເວັບອັນດັບ 1 ຂອງລາວ</title>
+  <meta name="description" content="TOTTI911 ລະບົບ Auto ຝາກ-ຖອນ ໄວ ປອດໄພ 24 ຊົ່ວໂມງ ຮອງຮັບທຸກທະນາຄານ ມີທາງເຂົ້າສຳຮອງ.">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="TOTTI911 — ເວັບອັນດັບ 1 ຂອງລາວ" />
+  <meta property="og:description" content="ລະບົບ Auto ຝາກ-ຖອນ ໄວ ປອດໄພ 24 ຊົ່ວໂມງ ມີທາງເຂົ້າສຳຮອງ." />
+  <meta property="og:image" content="assets/og.jpg" />
+  <meta name="theme-color" content="#0f172a" />
+
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: url("images/dragon-bg.jpg") no-repeat center center fixed;
-      background-size: cover; /* ขยายรูปเต็มจอ */
-      font-family: sans-serif;
+    :root {
+      --brand:#facc15;
+      --text:#f1f5f9;
+      --muted:#94a3b8;
+      --card-bg:rgba(0,0,0,0.6);
+      --btn-bg:#1f2937;
+      --btn-hover:#334155;
+      --ring:rgba(250,204,21,.35);
     }
 
-    a img {
-      width: 220px;
-      border-radius: 15px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    *{box-sizing:border-box}
+    html,body{
+      margin:0;
+      padding:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;
+      color:var(--text);
+      background: url('https://images.unsplash.com/photo-1602526216434-79a5cb364a7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+      background-size:cover;
     }
 
-    a img:hover {
-      transform: scale(1.1);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+    body::before {
+      content:"";
+      position:fixed;
+      inset:0;
+      background:linear-gradient(180deg,rgba(0,0,0,.85),rgba(0,0,0,.7));
+      backdrop-filter: blur(2px);
+      z-index:-1;
     }
+
+    a{text-decoration:none;color:inherit}
+
+    .wrap{max-width:960px;margin:0 auto;padding:20px}
+
+    header{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      padding:20px;
+      border-radius:16px;
+      background:var(--card-bg);
+      box-shadow:0 8px 28px rgba(0,0,0,.6);
+      border:1px solid rgba(255,255,255,.08);
+    }
+
+    .logo{
+      width:72px;height:72px;
+      border-radius:50%;
+      background:radial-gradient(circle at 30% 30%,#2b334a,#121827);
+      display:grid;place-items:center;
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow:0 0 20px rgba(250,204,21,.35);
+    }
+
+    .logo b{
+      font-weight:800;
+      background:linear-gradient(90deg,#f9f7dc,#facc15,#f59e0b);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      font-size:14px;
+      text-align:center;
+      letter-spacing:.8px
+    }
+
+    .hero h1{margin:0;font-size:clamp(22px,4vw,36px);line-height:1.25}
+    .hero p{margin:.35rem 0 0;color:var(--muted)}
+
+    .cta{margin:20px 0 0;display:grid;gap:14px}
+
+    .btn{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:14px 18px;
+      border-radius:14px;
+      background:linear-gradient(180deg,#1f2937,#111827);
+      border:1px solid rgba(255,255,255,.08);
+      transition:.2s;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px) scale(1.01);
+      background:var(--btn-hover);
+      box-shadow:0 0 20px rgba(250,204,21,.25);
+    }
+
+    .btn .left{display:flex;align-items:center;gap:12px}
+
+    .pill{
+      font-size:12px;padding:3px 8px;
+      border-radius:999px;
+      background:rgba(250,204,21,.12);
+      border:1px solid rgba(250,204,21,.25);
+      color:#fde68a
+    }
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:22px 0}
+
+    .card{
+      padding:18px;
+      border-radius:16px;
+      background:var(--card-bg);
+      border:1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(3px);
+      box-shadow:0 8px 24px rgba(0,0,0,.5);
+    }
+
+    .card h3{margin:0 0 6px;font-size:18px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+
+    .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+    .badge{
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(15,23,42,.8);
+      border:1px solid rgba(255,255,255,.1);
+      font-size:13px;
+      color:#e2e8f0
+    }
+
+    .faq{margin:30px 0;display:grid;gap:12px}
+    details{
+      background:var(--card-bg);
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:12px;
+      padding:14px
+    }
+    summary{cursor:pointer;font-weight:600}
+    details p{color:var(--muted);margin:.6rem 0 0}
+
+    .footer{margin:28px 0 6px;color:#94a3b8;font-size:13px;text-align:center}
+    .hr{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent);margin:22px 0}
   </style>
 </head>
 <body>
+  <div class="wrap">
+    <header>
+      <div class="logo" aria-hidden="true"><b>TOT<br>TI911</b></div>
+      <div class="hero">
+        <h1>TOTTI911 — ເວັບອັນດັບ 1 ຂອງລາວ</h1>
+        <p>ບໍລິການດ້ວຍໃຈ · ລະບົບ Auto ຝາກ-ຖອນ ໄວ · ປອດໄພ · ຮອງຮັບທຸກທະນາຄານ · ເຂົ້າໄດ້ບໍ່ຕ້ອງ VPN</p>
+        <div class="cta" id="cta">
+          <a class="btn" id="btn-enter" href="#" target="_blank"><span class="left">🚀 <span><strong>ທາງເຂົ້າຫຼັກ</strong> <span class="pill">TOTTI911</span></span></span> ➜</a>
+          <a class="btn" id="btn-enter-backup" href="#" target="_blank"><span class="left">🔑 <span><strong>ທາງເຂົ້າສຳຮອງ</strong></span></span> <span class="pill">Auto</span></a>
+          <a class="btn" id="btn-wa-main" href="#" target="_blank"><span class="left">💬 <span><strong>ຕິດຕໍ່ພະນັກງານ</strong> <span class="pill">WhatsApp</span></span></span> ➜</a>
+          <a class="btn" id="btn-fb" href="#" target="_blank"><span class="left">📘 <span><strong>ເພຈເຟສບຸກ</strong></span></span> ➜</a>
+        </div>
+      </div>
+    </header>
 
-  <!-- ปุ่มลิงก์ -->
-  <a href="go.html" target="_blank">
-    <img src="images/totti911.png" alt="TOTTI911">
-  </a>
+    <div class="grid">
+      <div class="card">
+        <h3>ໄວ · ປອດໄພ · ບໍລິການ 24/7</h3>
+        <p>ຝາກ-ຖອນອັດຕະໂນມັດ ຮອງຮັບທຸກທະນາຄານ ມີທາງເຂົ້າສຳຮອງ ລົງທຶນໄດ້ຢ່າງອຸ່ນໃຈ.</p>
+        <div class="badges">
+          <span class="badge">Auto ຝາກ-ຖອນ</span>
+          <span class="badge">ບໍລິການ 24 ຊົ່ວໂມງ</span>
+          <span class="badge">ບໍ່ຕ້ອງ VPN</span>
+          <span class="badge">Promotion ເຕັມ</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>ວິທີສະໝັກງ່າຍ</h3>
+        <p>ກົດ “ທາງເຂົ້າ” ເພື່ອສະໝັກ Auto ຫຼື ກົດ WhatsApp ໃຫ້ພະນັກງານຊ່ວຍລົງທະບຽນ.</p>
+        <div class="badges">
+          <span class="badge">OTP ຢືນຢັນ</span>
+          <span class="badge">ຊື່ບັນຊີຕົງກັນ</span>
+          <span class="badge">ປອດໄພ</span>
+        </div>
+      </div>
+    </div>
 
+    <div class="faq">
+      <details>
+        <summary>ຈົດຈຳ: ບໍ່ແຊ່ງ OTP ແລະ Password ໃຫ້ຜູ້ໃດ</summary>
+        <p>ເພື່ອຄວາມປອດໄພ ຢ່າແບ່ງປັນ OTP/Password. ຊື່ບັນຊີທະນາຄານຕ້ອງກົງກັບຜູ້ສະໝັກ.</p>
+      </details>
+      <details>
+        <summary>ທາງເຂົ້າບໍ່ໄດ້?</summary>
+        <p>ລອງປ່ຽນ 4G/Wi-Fi ຫຼື ໃຊ້ປຸ່ມ “ທາງເຂົ້າສຳຮອງ”.</p>
+      </details>
+    </div>
+
+    <div class="hr"></div>
+    <p class="footer">© <span id="y"></span> TOTTI911 · ເວັບອັນດັບ 1 ຂອງລາວ</p>
+  </div>
+
+  <script>
+    const CONFIG = {
+      entrances:["https://totti911-savanhstore.store/","https://totti911-savanhstore.store/"],
+      whatsappMain:"https://wa.me/XXXXXXXXXXX",
+      facebook:"https://www.facebook.com/profile.php?id=61577060775782"
+    };
+    const rnd=arr=>arr[Math.floor(Math.random()*arr.length)];
+    const setHref=(id,url)=>{const a=document.getElementById(id);if(a)a.href=url;};
+    const anyEntrance=rnd(CONFIG.entrances);
+    const anotherEntrance=rnd(CONFIG.entrances.filter(u=>u!==anyEntrance))||anyEntrance;
+    setHref('btn-enter',anyEntrance);
+    setHref('btn-enter-backup',anotherEntrance);
+    setHref('btn-wa-main',CONFIG.whatsappMain);
+    setHref('btn-fb',CONFIG.facebook);
+    document.getElementById('y').textContent=new Date().getFullYear();
+  </script>
 </body>
 </html>
