@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+  <meta charset="UTF-8">
+  <title>Dragon Background</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url("images/dragon-bg.jpg") no-repeat center center fixed;
+      background-size: cover; /* ขยายรูปเต็มจอ */
+      font-family: sans-serif;
+    }
+
+    a img {
+      width: 220px;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    a img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ปุ่มลิงก์ -->
+  <a href="go.html" target="_blank">
+    <img src="images/totti911.png" alt="TOTTI911">
+  </a>
+
+</body>
+</html>
